@@ -7,8 +7,8 @@ const Register = () => {
     };
 
     return (
-        <div className="flex items-center justify-center h-[calc(100vh-150px)]">
-            <div className="w-[390px] p-8 bg-white border-2 rounded-lg shadow-lg">
+        <div className="flex items-center justify-center h-[calc(100vh-50px)]">
+            <div className="w-[440px] p-8 bg-white border-2 rounded-lg shadow-lg">
                 <h1 className="text-2xl font-semibold text-center mb-6 text-gray-800">
                     Create an Account
                 </h1>

@@ -72,9 +72,10 @@ const TopSellers = () => {
                     filteredBooks.map((book, index) => (
                         <SwiperSlide key={index}>
                             <div className="flex flex-col">
-                                <BookCard book={book} />
+                                <BookCard book={book} /> <br /><br />
                                 {/* Pagination Dots Wrapper */}
-                                <div className="swiper-pagination mt-4"></div>
+                                <div className="swiper-pagination"></div>
+
                             </div>
                         </SwiperSlide>
                     ))}

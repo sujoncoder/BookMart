@@ -6,6 +6,7 @@ import { GoHeart } from "react-icons/go";
 import { BsCartCheck } from "react-icons/bs";
 import Avatar from "../assets/avatar.png"
 import { useState } from "react";
+import { useSelector } from "react-redux";
 
 
 const navigations = [
@@ -17,7 +18,8 @@ const navigations = [
 
 const Navbar = () => {
     const [isDropDown, setIsDropDown] = useState(false);
-    console.log(isDropDown)
+    const cartItems = useSelector((state) => state.cart.cartItems);
+
 
     const currentuser = false;
 
@@ -76,7 +78,9 @@ const Navbar = () => {
 
                     <Link to="/cart" className="bg-primary p-1 sm:px-6 px-2 flex items-center rounded-sm">
                         <BsCartCheck className="size-6" />
-                        <span className="font-semibold sm:ml-1">0</span>
+                        {
+                            cartItems.length > 0 ? <span className="font-semibold sm:ml-1">{cartItems.length}</span> : <span className="font-semibold sm:ml-1">0</span>
+                        }
                     </Link>
                 </div>
             </nav>
