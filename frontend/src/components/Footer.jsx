@@ -67,7 +67,7 @@ const Footer = () => {
                         Connect with us on our social platforms.
                     </p>
                     <div className="flex space-x-4">
-                        <a href="#" className="text-gray-400 hover:text-blue-400 transition">
+                        <a href="https://www.facebook.com/iamsujonsheikh" className="text-gray-400 hover:text-blue-400 transition">
                             <FaFacebook size={24} />
                         </a>
                         <a href="#" className="text-gray-400 hover:text-blue-400 transition">

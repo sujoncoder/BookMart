@@ -13,13 +13,13 @@ const navigations = [
     { name: "Orders", href: "/orders" },
     { name: "Cart", href: "/cart" },
     { name: "Check Out", href: "/checkout" },
-]
+];
 
 const Navbar = () => {
     const [isDropDown, setIsDropDown] = useState(false);
     console.log(isDropDown)
 
-    const currentuser = true;
+    const currentuser = false;
 
     return (
         <header className='max-w-screen-2xl mx-auto px-4 py-6'>
