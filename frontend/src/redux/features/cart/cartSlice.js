@@ -28,11 +28,31 @@ const cartSlice = createSlice({
                     showConfirmButton: false,
                 });
             }
+        },
+        removeFromCart: (state, action) => {
+            state.cartItems = state.cartItems.filter((item) => item._id !== action.payload._id);
+            Swal.fire({
+                position: "top-center",
+                icon: "success",
+                title: "Product removed from the cart",
+                showConfirmButton: false,
+                timer: 1500
+            });
+        },
+        clearCart: (state) => {
+            state.cartItems = [];
+            Swal.fire({
+                position: "top-center",
+                icon: "success",
+                title: "The product cart is empty",
+                showConfirmButton: false,
+                timer: 1500
+            });
         }
 
     }
 });
 
-export const { addToCart } = cartSlice.actions;
+export const { addToCart, removeFromCart, clearCart } = cartSlice.actions;
 
 export default cartSlice.reducer;
