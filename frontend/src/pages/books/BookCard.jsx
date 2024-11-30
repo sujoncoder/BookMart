@@ -10,7 +10,6 @@ const BookCard = ({ book }) => {
 
     const handleAddToCart = (product) => {
         dispatch(addToCart(product));
-        console.log("jshjkdd")
     };
 
     return (
