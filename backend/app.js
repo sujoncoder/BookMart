@@ -6,6 +6,7 @@ import rateLimit from "express-rate-limit";
 import cors from "cors";
 
 import bookRouter from "./src/books/book.routes.js";
+import authRouter from "./src/auth/auth.routes.js";
 
 const app = express();
 
@@ -32,6 +33,7 @@ app.use(cors({
 
 // APPLICATION LAYER MIDDLEWARE ==> ROUTING
 app.use("/api/books", bookRouter);
+app.use("/api/auth", authRouter);
 
 
 // HANDLE CLIENT ERROR

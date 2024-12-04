@@ -8,24 +8,23 @@ import BookCard from "../books/BookCard";
 
 const Recommended = () => {
     const { data, error, isLoading } = useFetchAllBooksQuery();
-    const books = data?.books || []; // Adjust this if your API response has a different structure
+    const books = data?.books || [];
 
     if (isLoading) {
         return <p>Loading recommended books...</p>;
-    }
+    };
 
     if (error) {
         return <p>Error fetching books: {error.message}</p>;
-    }
+    };
 
     if (books.length === 0) {
         return <p>No recommended books available at the moment.</p>;
-    }
+    };
 
     return (
         <div>
             <h2 className="text-3xl font-semibold mb-6">Recommended for you</h2>
-
             <Swiper
                 slidesPerView={1}
                 spaceBetween={30}
@@ -44,7 +43,7 @@ const Recommended = () => {
             >
                 {books.slice(8, 18).map((book, index) => (
                     <SwiperSlide key={index}>
-                        <BookCard book={book} />
+                        <BookCard book={book} /><br /><br />
                     </SwiperSlide>
                 ))}
             </Swiper>

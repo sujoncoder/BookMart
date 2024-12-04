@@ -1,16 +1,15 @@
 import { useState } from "react"
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { Pagination, Navigation } from 'swiper/modules';
 
 import BookCard from "../books/BookCard";
+import { useFetchAllBooksQuery } from "../../redux/features/cart/booksApi";
 
 
 const categories = ["Choose a genre", "Business", "Fiction", "Horror", "Adventure"];
-
-import { useFetchAllBooksQuery } from "../../redux/features/cart/booksApi";
 
 const TopSellers = () => {
     const { data, error, isLoading } = useFetchAllBooksQuery();
@@ -64,7 +63,7 @@ const TopSellers = () => {
                 {Array.isArray(filteredBooks) && filteredBooks.length > 0 ? (
                     filteredBooks.map((book, index) => (
                         <SwiperSlide key={index}>
-                            <BookCard book={book} />
+                            <BookCard book={book} /> <br /><br />
                         </SwiperSlide>
                     ))
                 ) : (

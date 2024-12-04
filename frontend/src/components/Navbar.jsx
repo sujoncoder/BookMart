@@ -29,7 +29,7 @@ const Navbar = () => {
                 {/* LEFT SIDE  */}
                 <div className="flex items-center md:gap-16 gap-4">
                     <Link>
-                        <img className='w-10 h-10 shadow' src={Logo} alt="" />
+                        <img className='w-12 h-12' src={Logo} alt="" />
                     </Link>
 
                     {/* SEARCH ICON */}

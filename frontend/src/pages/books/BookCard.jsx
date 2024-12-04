@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { FiShoppingCart } from "react-icons/fi"
+import { BsCartPlus } from "react-icons/bs";
 import { getImgUrl } from "../../utils/getImgUrl"
 import { useDispatch } from 'react-redux'
 import { addToCart } from "../../redux/features/cart/cartSlice"
@@ -39,8 +39,11 @@ const BookCard = ({ book }) => {
                         ${book?.newPrice} <span className="line-through font-normal ml-2">${book?.oldPrice}</span>
                     </p>
 
-                    <button onClick={() => handleAddToCart(book)} className="flex items-center w-40 space-x-2 px-6 py-2 rounded bg-slate-700 hover:bg-slate-800 active:bg-slate-900 duration-200 text-white font-medium cursor-pointer">
-                        <FiShoppingCart className="" />
+                    <button
+                        onClick={() => handleAddToCart(book)}
+                        className="flex items-center justify-center w-48 space-x-2 px-6 py-2 rounded bg-slate-700 hover:bg-slate-800 active:bg-slate-900 duration-200 text-white font-medium cursor-pointer"
+                    >
+                        <BsCartPlus className="text-lg" />
                         <span>Add to Cart</span>
                     </button>
                 </div>

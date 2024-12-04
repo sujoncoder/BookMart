@@ -1,8 +1,9 @@
 import { FaTrashAlt, FaArrowLeft, FaShoppingCart } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+
 import { getImgUrl } from "../../utils/getImgUrl";
 import { clearCart, removeFromCart } from "../../redux/features/cart/cartSlice";
-import { useNavigate } from "react-router-dom";
 
 const CartPage = () => {
     const cartItems = useSelector((state) => state.cart.cartItems);

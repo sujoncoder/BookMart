@@ -45,7 +45,7 @@ export const getSingleBook = async (req, res) => {
 
         return res.status(202).json({
             success: true,
-            books: book
+            book: book
         })
     } catch (error) {
         console.error(error.message);
@@ -76,6 +76,7 @@ export const updateBook = async (req, res) => {
 };
 
 
+// DELETE SINGLE BOOK BY ID
 export const deleteBook = async (req, res) => {
     try {
         const { id } = req.params;

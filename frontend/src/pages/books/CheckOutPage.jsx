@@ -30,7 +30,7 @@ const CheckOutPage = () => {
         const { name, value, type, checked } = e.target;
 
         if (name.startsWith("address.")) {
-            const field = name.split(".")[1]; // Extract the specific address field
+            const field = name.split(".")[1];
             setFormData((prev) => ({
                 ...prev,
                 address: {
